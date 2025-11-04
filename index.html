@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoWave | 플라스틱 제로 챌린지</title>
+  <style>
+    /* 기본 세팅 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f7f9f8;
+      overflow-x: hidden;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: #1c8b6a;
+      font-weight: 700;
+    }
+    nav a {
+      text-decoration: none;
+      color: #444;
+      margin-left: 1.2rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #1c8b6a;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 6rem 2rem;
+      text-align: center;
+      transition: opacity 1s ease, transform 1s ease;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section h2 {
+      font-size: 2.2rem;
+      color: #1c8b6a;
+      margin-bottom: 1rem;
+    }
+    section p {
+      max-width: 800px;
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 2rem;
+    }
+
+    /* 개별 섹션 배경 */
+    #home {
+      background: linear-gradient(135deg, #e3f9f0, #ffffff);
+    }
+    #about {
+      background: #ffffff;
+    }
+    #activities {
+      background: #f0f7f5;
+    }
+    #campaign {
+      background: linear-gradient(135deg, #d7f0e4, #f9fffd);
+    }
+    #news {
+      background: #ffffff;
+    }
+    #contact {
+      background: #f3faf8;
+    }
+
+    button {
+      background: #1c8b6a;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #157054;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      background: #e8f4ef;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌊 EcoWave</h1>
+    <nav>
+      <a href="#home">소개</a>
+      <a href="#activities">핵심활동</a>
+      <a href="#campaign">캠페인참여</a>
+      <a href="#news">뉴스/스토리</a>
+      <a href="#contact">후원/문의</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>작은 파도가 큰 변화를 만든다 🌊</h2>
+    <p>
+      EcoWave는 청소년이 주도하는 환경 비영리재단으로,<br>
+      플라스틱 제로 사회를 향한 작은 실천을 이어갑니다.<br>
+      우리의 파도는 지구를 더 푸르게 만듭니다.
+    </p>
+    <button onclick="document.querySelector('#activities').scrollIntoView({behavior:'smooth'})">더 알아보기</button>
+  </section>
+
+  <section id="activities">
+    <h2>🌱 핵심 활동</h2>
+    <p>
+      <strong>플라스틱 제로 챌린지!</strong><br>
+      일회용품 사용을 줄이고, 지역 리필스테이션을 지도에 표시하며<br>
+      모두가 참여할 수 있는 친환경 실천 문화를 확산합니다.
+    </p>
+    <img src="https://cdn-icons-png.flaticon.com/512/427/427735.png" alt="eco icon" width="80" />
+  </section>
+
+  <section id="campaign">
+    <h2>🤝 캠페인 참여</h2>
+    <p>
+      나의 작은 선택이 지구의 내일을 바꿉니다.<br>
+      지금 ‘플라스틱 제로 챌린지’에 참여하고 SNS에 인증하세요.<br>
+      #EcoWave #플라스틱제로챌린지
+    </p>
+    <button onclick="alert('참여 감사합니다! 🌿')">참여하기</button>
+  </section>
+
+  <section id="news">
+    <h2>📰 뉴스 / 스토리</h2>
+    <p>
+      - “충렬여고 EcoWave, 지역 리필스테이션 지도 공개” (환경일보)<br>
+      - “학생들이 만든 파도, 학교를 바꾸다” (에코저널)<br><br>
+      우리의 이야기는 지금도 계속됩니다.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>📩 후원 / 문의</h2>
+    <p>
+      EcoWave에 함께하고 싶다면 언제든 연락주세요!<br>
+      ✉️ ecowave@school.kr<br>
+      ☎️ 010-0000-0000
+    </p>
+    <button onclick="alert('문의 메일이 발송되었습니다. 감사합니다! 🌊')">문의하기</button>
+  </section>
+
+  <footer>
+    © 2025 EcoWave. 이 홈페이지의 지적 소유권은 <strong>충렬여고 1학년 1반</strong>에게 있습니다.
+  </footer>
+
+  <script>
+    // 스크롤 시 섹션 페이드인 효과
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+</body>
+</html>
